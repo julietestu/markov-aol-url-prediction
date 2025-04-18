@@ -7,21 +7,21 @@ Analyser le comportement des utilisateurs à partir de sessions de navigation (r
 # Arborescence du projet 
 markov-navigation-predictor/
 │
-├── data/                        # Données sources (user_sessions.txt)
+├── data/              
 │   └── user_sessions.txt
 │
-├── src/                         # Code source
-│   ├── index.js                 # Point d'entrée
-│   ├── loader.js                # Chargement et nettoyage des données
-│   ├── matrixBuilder.js         # Construction matrice de transition
-│   ├── simulator.js             # Simulation de navigation Markov
-│   ├── exporter.js              # Export des résultats
-│   └── utils.js                 # Fonctions diverses
+├── src/             
+│   ├── index.js       
+│   ├── loader.js    
+│   ├── matrixBuilder.js
+│   ├── simulator.js         
+│   ├── exporter.js       
+│   └── utils.js             
 │
-├── results/                     # Résultats des simulations
+├── results/           
 │   └── (à générer plus tard)
 │
-├── docs/                        # Documentation, figures, PDF, etc.
+├── docs/                        
 │   └── sujet_markov_fr.pdf
 │
 ├── .gitignore
