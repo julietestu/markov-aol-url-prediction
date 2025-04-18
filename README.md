@@ -5,30 +5,23 @@ Prédiction des URLs cliquées à partir des recherches initiales des utilisateu
 Analyser le comportement des utilisateurs à partir de sessions de navigation (requêtes + clics), et prédire les prochaines page visitées grâce à une simulation avec chaînes de Markov. 
 
 # Arborescence du projet 
-markov-navigation-predictor/
-│
-├── data/              
-│   └── user_sessions.txt
-│
-├── src/             
-│   ├── index.js       
-│   ├── loader.js    
-│   ├── matrixBuilder.js
-│   ├── simulator.js         
-│   ├── exporter.js       
-│   └── utils.js             
-│
-├── results/           
-│   └── (à générer plus tard)
-│
-├── docs/                        
-│   └── sujet_markov_fr.pdf
-│
-├── .gitignore
-├── README.md
-├── package.json
-└── LICENSE
-
+- markov-navigation-predictor/
+- - data /
+  - - user_sessions.txt
+  - src /
+  - - index.js
+    - loader.js
+    - matrixBuilder.js
+    - simulator.js
+    - exporter.js
+    - utils.js
+  - results /
+  - - à générer plus tard
+  - .gitignore
+  - README.md
+  - package.json
+  - LICENSE 
+  
 # Technologies utilisées 
 - NodeJS
 - JAvaScipt
