@@ -33,12 +33,15 @@ Le projet utilise les bibliothèques suivantes :
 - Analyse Markov de premier ordre
 
 ## Structure du projet
+```
 src/
-├── loadData.js // Chargement et nettoyage des données
-├── transitionMatrix.js // Construction des matrices de transition
-├── pathSimulation.js // Génération des parcours déterministes et aléatoires
-├── display.js // Affichage formaté des résultats
-└── main.js // Point d'entrée principal
+├── loadData.js          (Chargement et nettoyage des données)
+├── transitionMatrix.js  (Construction des matrices de transition)
+├── pathSimulation.js    (Génération des parcours déterministes et aléatoires)
+├── display.js           (Affichage formaté des résultats)
+└── main.js              (Point d'entrée principal)
+```
+
 
 
 ## Installation et exécution
