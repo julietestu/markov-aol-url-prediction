@@ -1,39 +1,66 @@
 # Markov AOL URL Prediction
+Ce projet propose une analyse de navigation web fondée sur les chaînes de Markov, appliquée au jeu de données public AOL User Session Collection (500K sessions).
 
-Projet d’analyse de navigation web basé sur les **chaînes de Markov**, utilisant les données de recherche AOL 500K.
+## Objectif
+L'objectif est de prédire, à partir d'une requête utilisateur :
+- Les pages web les plus susceptibles d'être visitées
+- Les parcours de navigation les plus probables à partir d'une page donnée
 
-L'objectif est de prédire :
-Les **pages web les plus probables** à visiter après une recherche utilisateur
-Les **chemins de navigation possibles** à partir d’une page web (en version déterministe ou aléatoire pondérée)
+Deux types de simulation de navigation sont proposés :
+- Version déterministe : suit les transitions de probabilité maximale
+- Version aléatoire pondérée : effectue des tirages selon les probabilités observées
 
 ## Données utilisées
-Les données proviennent du jeu de données public :
+Les données proviennent du jeu de données suivant :
 [AOL User Session Collection - 500K](https://www.kaggle.com/datasets/dineshydv/aol-user-session-collection-500k)
+Le fichier `user_sessions.txt` étant trop volumineux pour GitHub (>100 Mo), il doit être téléchargé manuellement et placé dans le répertoire suivant :
+markov-predict/
+└── data/
+└── user_sessions.txt
 
-## Dépendances 
-Ce projet utilise :
-"Ramda" pour les transformations fonctionnelles 
-"Readline" (inclus avec Node.js)
 
-## Fonctionnalités 
-Affichage des pages les plus visitées après une requête
-Simulation déterministe : parcours avec les probabilités maximales
-Simulation aléatoire pondérée : comportement réaliste d'un utilisateur 
-Analyse des chaînes de Markov du 1er ordre (page-page)
+## Dépendances
+Le projet utilise les bibliothèques suivantes :
+- `ramda` : pour la manipulation fonctionnelle des objets et tableaux
+- `readline` : pour l'interaction utilisateur en ligne de commande (native dans Node.js)
 
-## Structure du projet 
+## Fonctionnalités
+
+- Affichage des pages les plus consultées après une requête
+- Simulation d’un parcours utilisateur selon deux logiques : déterministe ou aléatoire pondérée
+- Affichage clair des chemins de navigation avec pourcentages de transition
+- Construction de matrices de transition Query → URL et URL → URL
+- Analyse Markov de premier ordre
+
+## Structure du projet
 src/
-  loadData.js : chargement et nettoyage des données 
-  transitionMatrix.js : matrice Query - URL et URL - URL 
-  pathSimulation.js : simulation de parcours déterministe et aléatoire 
-  display.js : affichage formaté des résultats 
-  main.js : point d'entrée (console) 
+├── loadData.js // Chargement et nettoyage des données
+├── transitionMatrix.js // Construction des matrices de transition
+├── pathSimulation.js // Génération des parcours déterministes et aléatoires
+├── display.js // Affichage formaté des résultats
+└── main.js // Point d'entrée principal
 
-## Auteurs 
-Julie Testu et Victor Lancelin 
 
-## Note 
-Ce projet est un cas d'étude pédagogique pour illustrer l'application des chaines de Markov sur des données réelles de navigation.
+## Installation et exécution
+
+1. Cloner le dépôt :
+git clone https://github.com/julietestu/markov-aol-url-prediction.git
+cd markov-aol-url-prediction
+
+2. Installer les dépendances :
+npm install
+
+3. Télécharger le fichier `user_sessions.txt` depuis Kaggle et le placer dans `data/`.
+
+4. Lancer le programme :
+5. node src/main.js
+
+
+## Auteurs
+Ce projet a été réalisé par Julie Testu et Victor Lancelin. 
+
+## Note
+Ce projet a été réalisé dans le cadre d'un travail académique visant à illustrer l'application des chaînes de Markov à des données réelles de navigation web.
 
 
 
