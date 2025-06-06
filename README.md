@@ -14,9 +14,7 @@ Deux types de simulation de navigation sont proposés :
 Les données proviennent du jeu de données suivant :
 [AOL User Session Collection - 500K](https://www.kaggle.com/datasets/dineshydv/aol-user-session-collection-500k)
 Le fichier `user_sessions.txt` étant trop volumineux pour GitHub (>100 Mo), il doit être téléchargé manuellement et placé dans le répertoire suivant :
-markov-predict/
-└── data/
-└── user_sessions.txt
+markov-predict/data/user_sessions.txt
 
 
 ## Dépendances
